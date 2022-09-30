@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="header" id="titulo">Javascript</h1>
+    <p class="texto">El arrendador declara que es el propietario del inmueble, ubicado en 
+            <span id="calle"></span> departamento <span id="dpto"></span>, de la comuna 
+            <span id="comuna"></span></p>
+    <img src="https://placedog.net/500/500"/>
+    <script>
+        
+        //Declaro mis variables
+        var calle = '';
+        var numeroDpto = '';
+        var comuna = '';
+
+        //Le pido al usuario el valor de esas variables
+        calle = prompt("Calle:");
+        numeroDpto = prompt("Nro. de Dpto:");
+        comuna = prompt("Comuna:");
+
+        //Obtengo los elemento del HTML. Donde voy a colocar las cosas
+        var spanCalle = document.querySelector('#calle');
+        var spanDpto = document.querySelector('#dpto');
+        var spanComuna = document.querySelector('#comuna');
+
+        //Coloca las cosas
+        spanCalle.innerHTML = calle;
+        spanDpto.innerHTML = numeroDpto;
+        spanComuna.innerHTML = comuna;
+        
+        //Seleccionamos el elemento
+        var titulo = document.querySelector(".header");
+
+        titulo.style.color = '#EFEFEF';
+        titulo.style.backgroundColor = 'green';
+
+        var imagen = document.querySelector("img");
+        var radio = prompt('Radio del borde');
+
+
+
+        imagen.style.borderRadius = radio;
+    </script>
+</body>
+
+</html>
